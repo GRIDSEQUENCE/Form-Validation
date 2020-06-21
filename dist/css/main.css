@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.container {
+  height: 100vh;
+  background-color: #25283d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container__block {
+  width: 500px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 20px 0 #151622;
+          box-shadow: 0 10px 20px 0 #151622;
+  overflow: hidden;
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: 25px auto;
+  -webkit-box-shadow: inset 10px 10px 20px 0 #1e2031, inset -5px -5px 20px 0 #2e324d;
+          box-shadow: inset 10px 10px 20px 0 #1e2031, inset -5px -5px 20px 0 #2e324d;
+}
+
+.profile__icon {
+  font-size: 50px;
+  color: #c9d8f3;
+}
+
+.social {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  margin: 17px 0;
+  padding-bottom: 25px;
+  width: 100%;
+}
+
+.social__icon {
+  font-size: 50px;
+  color: #c9d8f3;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.social__icon:hover {
+  cursor: pointer;
+  color: #7b9ad8;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1000px;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.form--register {
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+}
+
+.form__login, .form__register {
+  width: 500px;
+  padding: 20px 40px;
+}
+
+.form__box {
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.form__label {
+  position: absolute;
+  font-size: 0.75rem;
+  color: #c9d8f3;
+  left: 50px;
+  top: 17px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  pointer-events: none;
+}
+
+.form__label--focus {
+  top: 0;
+  font-size: 0.6rem;
+}
+
+.form__input {
+  width: 100%;
+  color: #c9d8f3;
+  padding: 16px 50px 10px;
+  font-size: 1rem;
+  border-bottom: 3px solid #2e324d;
+}
+
+.form__input--valid {
+  border-bottom: 3px solid #255109;
+}
+
+.form__icon {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 1.125rem;
+  color: #c9d8f3;
+}
+
+.form__icon--error {
+  position: absolute;
+  top: 56px;
+  left: 16px;
+  font-size: 1.125rem;
+  color: #dd2c00;
+}
+
+.form__eye {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 1.125rem;
+  padding: 6px;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  opacity: 0.25;
+  color: #c9d8f3;
+}
+
+.form__eye:hover {
+  opacity: 1;
+  color: #7b9ad8;
+}
+
+.form__message {
+  position: absolute;
+  left: 50px;
+  top: 56px;
+  background: #25283d;
+  font-size: 0.75rem;
+  color: #7b9ad8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.submit {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  justify-items: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px 0 0 auto;
+  width: 75%;
+}
+
+.submit__text {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #7b9ad8;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.submit__button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: 10px 10px 20px 0 #1e2031, -5px -5px 20px 0 #2e324d;
+          box-shadow: 10px 10px 20px 0 #1e2031, -5px -5px 20px 0 #2e324d;
+}
+
+.submit__button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-box-shadow: inset 10px 10px 20px 0 #1e2031, inset -5px -5px 20px 0 #2e324d;
+          box-shadow: inset 10px 10px 20px 0 #1e2031, inset -5px -5px 20px 0 #2e324d;
+}
+
+.submit__icon {
+  color: #c9d8f3;
+  padding: 12px 8px;
+  font-size: 24px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.submit__icon:hover {
+  color: #7b9ad8;
+}
+
+.account {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px 40px;
+}
+
+.account__text {
+  font-size: 0.625rem;
+  color: #c9d8f3;
+  letter-spacing: 0.3rem;
+}
+
+.account__link {
+  cursor: pointer;
+  color: #7b9ad8;
+  opacity: 0.5;
+  font-size: 0.75rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.account__link:hover {
+  opacity: 1;
+}

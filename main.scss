@@ -1,0 +1,257 @@
+// Font
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+// Reset
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+// Variables
+$background: #25283d;
+$shadow-light: #2e324d;
+$shadow-dark: #1e2031;
+$dark: #151622;
+$light: #c9d8f3;
+$light-blue: #7b9ad8;
+$valid: #255109;
+$invalid: #dd2c00;
+
+// Mixin
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 100vh;
+  background-color: $background;
+  @include center();
+
+  &__block {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 $dark;
+    overflow: hidden;
+  }
+}
+
+.profile {
+  @include center();
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: 25px auto;
+  box-shadow: inset 10px 10px 20px 0 $shadow-dark,
+    inset -5px -5px 20px 0 $shadow-light;
+
+  &__icon {
+    font-size: 50px;
+    color: $light;
+  }
+}
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  height: 100px;
+  margin: 17px 0;
+  padding-bottom: 25px;
+  width: 100%;
+
+  &__icon {
+    font-size: 50px;
+    color: $light;
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: $light-blue;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  width: 1000px;
+  transition: all 500ms ease-in-out;
+
+  &--register {
+    transform: translateX(-500px);
+  }
+
+  &__login,
+  &__register {
+    width: 500px;
+    padding: 20px 40px;
+  }
+
+  &__box {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  &__label {
+    position: absolute;
+    font-size: 0.75rem;
+    color: $light;
+    left: 50px;
+    top: 17px;
+    transition: all 250ms ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    pointer-events: none;
+
+    &--focus {
+      top: 0;
+      font-size: 0.6rem;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    color: $light;
+    padding: 16px 50px 10px;
+    font-size: 1rem;
+    border-bottom: 3px solid $shadow-light;
+
+    &--valid {
+      border-bottom: 3px solid $valid;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 1.125rem;
+    color: $light;
+
+    &--error {
+      position: absolute;
+      top: 56px;
+      left: 16px;
+      font-size: 1.125rem;
+      color: $invalid;
+    }
+  }
+
+  &__eye {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 1.125rem;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    opacity: 0.25;
+    color: $light;
+
+    &:hover {
+      opacity: 1;
+      color: $light-blue;
+    }
+  }
+
+  &__message {
+    position: absolute;
+    left: 50px;
+    top: 56px;
+    background: $background;
+    font-size: 0.75rem;
+    color: $light-blue;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.submit {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: right;
+  align-items: center;
+  margin: 40px 0 0 auto;
+  width: 75%;
+
+  &__text {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: $light-blue;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 10px 10px 20px 0 $shadow-dark, -5px -5px 20px 0 $shadow-light;
+
+    &:active {
+      transform: scale(0.98);
+      box-shadow: inset 10px 10px 20px 0 $shadow-dark,
+        inset -5px -5px 20px 0 $shadow-light;
+    }
+  }
+
+  &__icon {
+    color: $light;
+    padding: 12px 8px;
+    font-size: 24px;
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+      color: $light-blue;
+    }
+  }
+}
+
+.account {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px 40px;
+
+  &__text {
+    font-size: 0.625rem;
+    color: $light;
+    letter-spacing: 0.3rem;
+  }
+
+  &__link {
+    cursor: pointer;
+    color: $light-blue;
+    opacity: 0.5;
+    font-size: 0.75rem;
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

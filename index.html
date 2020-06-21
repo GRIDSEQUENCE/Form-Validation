@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="./dist/css/main.css">
+  <title>Form Validation</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="container__block">
+
+      <div class="profile"><i class="profile__icon material-icons">person</i></div>
+
+      <div class="form">
+
+        <form class="form__login" novalidate>
+
+          <div class="social">
+            <a href="#"><i class="social__icon fab fa-github"></i></a>
+            <a href="#"><i class="social__icon fab fa-codepen"></i></a>
+            <a href="#"><i class="social__icon fab fa-youtube"></i></a>
+          </div>
+
+          <div class="form__box">
+            <label class="form__label" for="username">username</label>
+            <input class="form__input" type="text" name="Username" id="username">
+            <i class="form__icon material-icons">person</i>
+            <i class="form__icon--error material-icons"></i>
+            <span class="form__message"></span>
+          </div>
+
+          <div class="form__box">
+            <label class="form__label" for="password">password</label>
+            <input class="form__input" type="password" name="Password" id="password">
+            <i class="form__icon material-icons">lock</i>
+            <i class="form__eye material-icons">visibility</i>
+            <i class="form__icon--error material-icons"></i>
+            <span class="form__message"></span>
+          </div>
+
+          <div class="submit">
+            <span class="submit__text">login</span>
+            <button id="loginSubmit" class="submit__button" type="submit">
+              <i class="submit__icon material-icons">arrow_forward</i>
+            </button>
+          </div>
+
+        </form>
+
+        <form class="form__register" novalidate>
+
+          <div class="form__box">
+            <label class="form__label" for="regUsername">username</label>
+            <input class="form__input" type="text" name="Username" id="regUsername">
+            <i class="form__icon material-icons">person</i>
+            <i class="form__icon--error material-icons"></i>
+            <span class="form__message"></span>
+          </div>
+
+          <div class="form__box">
+            <label class="form__label" for="email">email</label>
+            <input class="form__input" type="email" name="Email" id="email">
+            <i class="form__icon material-icons">mail</i>
+            <i class="form__icon--error material-icons"></i>
+            <span class="form__message"></span>
+          </div>
+
+          <div class="form__box">
+            <label class="form__label" for="regPassword">password</label>
+            <input class="form__input" type="password" name="Password" id="regPassword">
+            <i class="form__icon material-icons">lock</i>
+            <i class="form__eye material-icons">visibility</i>
+            <i class="form__icon--error material-icons"></i>
+            <span class="form__message"></span>
+          </div>
+
+          <div class="form__box">
+            <label class="form__label" for="confirmPassword">confirm password</label>
+            <input class="form__input" type="password" name="Confirm password" id="confirmPassword">
+            <i class="form__icon material-icons">lock</i>
+            <i class="form__eye material-icons">visibility</i>
+            <i class="form__icon--error material-icons"></i>
+            <span class="form__message"></span>
+          </div>
+
+          <div class="submit">
+            <span class="submit__text">register</span>
+            <button id="registerSubmit" class="submit__button" type="submit">
+              <i class="submit__icon material-icons">arrow_forward</i>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+      <div class="account">
+        <p class="account__text">use existing account</p>
+        <p class="account__text">create new account</p>
+        <p id="login" class="account__link">login</p>
+        <p id="register" class="account__link">register</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./dist/js/main.js"></script>
+</body>
+
+</html>
